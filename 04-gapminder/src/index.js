@@ -4,6 +4,19 @@
 import populationData from '../data/population_total.csv'
 import lifeData from '../data/life_expectancy_years.csv'
 import incomeData from '../data/income_per_person_gdppercapita_ppp_inflation_adjusted.csv'
+import {csv} from 'd3-fetch'
+
+csv(populationData).then(data => {
+    console.log(data);
+});
+
+csv(lifeData).then(data => {
+    console.log(data);
+});
+
+csv(incomeData).then(data => {
+    console.log(data);
+});
 
 
 // Pour convertir des chiffres avec un préfixe SI en chiffres ! A voir également https://github.com/d3/d3-format#formatPrefix
